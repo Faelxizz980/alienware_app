@@ -1,12 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+import Inicio from './components/TelaInicial'
+import Produtos from './components/TelaProdutos'
+import Recuros from './components/TelaRecursos' 
+
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+         screenOptions={{
+          headerStyle: {
+            backgroundColor: '#01010aff', // cor de fundo do header
+          },
+          headerTintColor: '#0749acff',   // cor do texto e ícones do header
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontFamily: 'Playfair Display',
+          },
+          headerTitleAlign: '', // centraliza o título
+        }}
+        >
+        <Stack.Screen 
+          name="Inicio" 
+          component={Inicio} 
+        />
+        <Stack.Screen 
+          name="Nossos Produtos" 
+          component={Produtos} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
