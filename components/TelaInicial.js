@@ -19,6 +19,7 @@ export default function Inicio (props){
                 style={styles.card}>  
                 <Text style={ styles.cardTexto}>Conheça Nossos Recursos</Text>
             </Pressable>
+           
 
         </View>
 
@@ -27,7 +28,7 @@ export default function Inicio (props){
 
 export const styles =  StyleSheet.create({
     container:{
-         backgroundColor: '#000000',
+         backgroundColor: '#111218ff',
         alignItems:'center',
         flex: 1
     },

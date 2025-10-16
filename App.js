@@ -19,7 +19,7 @@ export default function App() {
           headerStyle: {
             backgroundColor: '#01010aff', // cor de fundo do header
           },
-          headerTintColor: '#0749acff',   // cor do texto e ícones do header
+          headerTintColor: '#5c5c61ff',   // cor do texto e ícones do header
           headerTitleStyle: {
             fontWeight: 'bold',
             fontFamily: 'Playfair Display',
@@ -34,6 +34,10 @@ export default function App() {
         <Stack.Screen 
           name="Nossos Produtos" 
           component={Produtos} 
+        />
+        <Stack.Screen 
+          name="Nossos Recursos" 
+          component={Recuros} 
         />
       </Stack.Navigator>
     </NavigationContainer>
